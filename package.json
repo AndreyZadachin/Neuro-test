@@ -1,5 +1,5 @@
 {
-  "name": "webpackconfig",
+  "name": "Neuro-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndreyZadachin/WebpackConfig.git"
+    "url": "git+https://github.com/AndreyZadachin/Neuro-test.git"
   },
   "author": "Andrey Zadachin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AndreyZadachin/WebpackConfig/issues"
+    "url": "https://github.com/AndreyZadachin/Neuro-test/issues"
   },
-  "homepage": "https://github.com/AndreyZadachin/WebpackConfig#readme",
+  "homepage": "https://github.com/AndreyZadachin/Neuro-test#readme",
   "devDependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
-    "core-js": "3.4.1",
-    "flickity": "2.2.1"
+    "core-js": "3.4.1"
   }
 }
