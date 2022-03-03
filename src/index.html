@@ -7,28 +7,16 @@
     <meta name="description" content="SOMETHING!!!" />
     <meta name="keywords" content="SOMETHING!!!" />
     <meta name="author" content="AndreyZadachin" />
-    <link
-      rel="stylesheet"
-      href="<%=htmlWebpackPlugin.files.chunks.index.css %>"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="<%=require('./images/favicon.png').default%>"
-    />
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>" />
+
     <title>SOMETHING!!!</title>
   </head>
   <body class="body">
-    <div class="page">
-      <div class="page__container">
-        <div class="page__block">
-          <header class="header page__header"></header>
-          <main class="search page__search"></main>
-        </div>
-        <section class="preloader"></section>
-        <footer></footer>
-      </div>
-    </div>
+    <header class="header page__header"></header>
+    <main class="main">
+      <section></section>
+    </main>
+    <footer class="footer"></footer>
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
   </body>
 </html>
