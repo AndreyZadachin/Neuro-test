@@ -2,9 +2,47 @@
 @import url('../vendor/fonts.css');
 
 .main {
-  margin: 0 auto;
-  margin-top: 100px;
   width: 800px;
   height: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border: 1px solid red;
+  position: relative;
+}
+.section {
+  width: 50%;
+  height: 50%;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.main__second {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border: 1px solid red;
+  width: 800px;
+  height: 600px;
+}
+.section__second {
+  width: 50%;
+  height: 50%;
+  border: 1px solid red;
+}
+
+.main__third {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  border: 1px solid red;
+}
+
+.section__third {
   border: 1px solid red;
 }
