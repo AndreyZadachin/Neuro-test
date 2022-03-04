@@ -1,2 +1,37 @@
-@import url("../vendor/normalize.css");
-@import url("../vendor/fonts.css");
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+
+.accordion {
+  height: 60px;
+  width: 100%;
+  background: #f4f6f6;
+  color: #444;
+  cursor: pointer;
+  padding: 22px 30px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e6e6e6;
+}
+.accordion__active {
+  border-bottom: 2px solid #36a3eb;
+}
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+.accordion__panel {
+  padding: 0 0 0 30px;
+  margin-top: 24px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin: 0;
+}
