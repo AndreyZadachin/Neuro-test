@@ -1,21 +1,7 @@
-## WebpackConfig
+## Neuro-test
 
 ======
 
-### Webpack config stable
+## Level-3
 
-#### version v1.0.0
-
-Инструкция по развертыванию:
-
-1. Склонировать в локальный репозиторий - git clone https://github.com/AndreyZadachin/WebpackConfig.git
-2. Установить пакеты (должен быть установлен node.js <https://nodejs.org/en/>) - npm i
-3. Сборка пакета - npm run build
-4. Запуск на локальном сервере - npm run dev
-
-src - script:
-
-1. components - CommitCard, CommitCardList, FormValidate, NewsCard, NewsCardList
-2. constans - constans
-3. modules - DataStorage, GithubApi, NewsApi
-4. utils - formattingDate
+3. Реализовать воспроизведение видеофайла (желательно формата webm). Никаких элементов управления на блоке быть не должно, только предзагруженный первый кадр видео и текущее время видео в формате MM:SS:mmm. Видео должно запускаться и ставиться на паузу по клику мыши. По окончанию видео останавливается и возвращается на начальный кадр - Вывод времени в нужном формате не реализован

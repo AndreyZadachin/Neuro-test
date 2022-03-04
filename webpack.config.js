@@ -1,74 +1,74 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const WebpackMd5Hash = require("webpack-md5-hash");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const webpack = require("webpack");
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackMd5Hash = require('webpack-md5-hash');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require('webpack');
 
-const isDev = process.env.NODE_ENV === "development";
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    index: "./src/index.js",
+    index: './src/index.js',
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "scripts/[name].[chunkhash].js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'scripts/[name].[chunkhash].js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: { loader: "babel-loader" },
+        use: { loader: 'babel-loader' },
         exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
         use: [
           isDev
-            ? "style-loader"
+            ? 'style-loader'
             : {
                 loader: MiniCssExtractPlugin.loader,
                 options: {
-                  publicPath: "../",
+                  publicPath: '../',
                 },
               },
-          "css-loader",
-          "postcss-loader",
+          'css-loader',
+          'postcss-loader',
         ],
       },
       {
-        test: /\.(png|jpg|gif|ico|svg)$/,
+        test: /\.(png|jpg|gif|ico|svg|webm)$/,
         use: [
-          "file-loader?name=./images/[name].[ext]",
+          'file-loader?name=./images/[name].[ext]',
           {
-            loader: "image-webpack-loader",
+            loader: 'image-webpack-loader',
             options: {},
           },
         ],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: "file-loader?name=./vendor/fonts/[name].[ext]",
+        loader: 'file-loader?name=./vendor/fonts/[name].[ext]',
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].css",
+      filename: 'styles/[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
-      cssProcessor: require("cssnano"),
+      cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
-        preset: ["default"],
+        preset: ['default'],
       },
       canPrint: true,
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: "./src/index.html",
-      filename: "index.html",
+      template: './src/index.html',
+      filename: 'index.html',
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

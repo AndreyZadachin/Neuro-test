@@ -1,2 +1,20 @@
-@import url("../vendor/normalize.css");
-@import url("../vendor/fonts.css");
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+
+a {
+  cursor: pointer;
+}
+.section {
+  margin: 0 auto;
+  position: relative;
+  width: 640px;
+  margin-top: 100px;
+}
+
+.time {
+  position: absolute;
+  top: 93%;
+  left: 90%;
+  z-index: 1;
+  color: white;
+}

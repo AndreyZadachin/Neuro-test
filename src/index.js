@@ -1,7 +1,22 @@
-import "./pages/index.css";
-/*import FormValidate from "./script/components/FormValidate";
-import NewsApi from "./script/modules/NewsApi";
-import NewsCard from "./script/components/NewsCard";
-import NewsCardList from "./script/components/NewsCardList";
-import DataStorage from "./script/modules/DataStorage";
-*/
+import './pages/index.css';
+
+const playbtn = document.querySelector('.play');
+const video = document.querySelector('.video');
+
+playbtn.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
+function settime() {
+  if (video.play()) {
+    setInterval(function () {
+      document.querySelector('.time').innerHTML = video.currentTime;
+    }, 1000);
+  }
+}
+
+settime();
