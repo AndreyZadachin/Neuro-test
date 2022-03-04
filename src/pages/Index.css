@@ -1,2 +1,13 @@
-@import url("../vendor/normalize.css");
-@import url("../vendor/fonts.css");
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+
+.section {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.users__container {
+  margin-right: 20px;
+}
